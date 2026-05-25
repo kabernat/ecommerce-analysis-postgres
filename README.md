@@ -11,7 +11,7 @@ Repozytorium zawiera kompleksową analizę danych testowej bazy sklepu e-commerc
 * `queries.sql` - Zawiera wszystkie zapytania SQL użyte do ekstrakcji, agregacji i segmentacji danych.
 * `data/` - Surowe pliki CSV użyte do analizy:
     * `distribution_centers.csv`
-    * `events_small.csv` *(Uwaga: Jest to skrócona próbka oryginalnego zbioru ze zdarzeniami, dostosowana do limitów wielkości plików na portalu GitHub)*
+    * `events_small.csv` *(Uwaga: Jest to skrócona próbka oryginalnego zbioru)*
     * `inventory_items.csv`
     * `order_items.csv`
     * `orders.csv`
@@ -56,10 +56,10 @@ Klasyfikacja klientów na podstawie częstotliwości ich zamówień, pozwalając
 ## 💡 Wnioski Biznesowe
 Na podstawie analizy SQL można wyróżnić kilka kluczowych rekomendacji biznesowych:
 
-1. **Potrzeba skupienia na retencji:** Segmentacja ujawnia dokładne proporcje klientów "Nowych" do "Powracających". Działania marketingowe powinny mocniej skupić się na konwersji kupujących jednorazowo w segment klientów powracających, ponieważ koszty pozyskania nowego klienta (CAC) są zazwyczaj znacznie wyższe niż koszty jego utrzymania.
+1. **Marża a Wolumen:** Niektóre kategorie generują duży wolumen sprzedaży, ale charakteryzują się niższą średnią marżą. Firma powinna priorytetowo traktować promowanie tych kategorii, które trafiają w "złoty środek" (generują wysoki przychód przy zachowaniu wysokiej średniej marży).
 
 2. **Kontrola jakości dla najczęściej zwracanych kategorii:** Kategorie o najwyższym wskaźniku zwrotów powinny zostać poddane audytowi. Poprawa tabel rozmiarów, dodanie lepszych zdjęć lub weryfikacja opisów produktów mogłaby znacząco obniżyć koszty obsługi zwrotów i logistyki.
 
-3. **Marża a Wolumen:** Niektóre kategorie generują duży wolumen sprzedaży, ale charakteryzują się niższą średnią marżą. Firma powinna priorytetowo traktować promowanie tych kategorii, które trafiają w "złoty środek" (generują wysoki przychód przy zachowaniu wysokiej średniej marży).
+3. **Potrzeba skupienia na retencji:** Segmentacja ujawnia wyraźną dysproporcję — 24 394 klientów jednorazowych wobec zaledwie 3 309 powracających. Działania marketingowe powinny mocniej skupić się na konwersji kupujących jednorazowo w segment klientów powracających, ponieważ koszty pozyskania nowego klienta (CAC) są zazwyczaj znacznie wyższe niż koszty jego utrzymania.
 
 4. **Sezonowość:** Miesięczne trendy przychodowe wyraźnie wskazują na konkretne szczyty sezonowe. Ta wiedza pozwala lepiej zaplanować i zoptymalizować stany magazynowe oraz budżety reklamowe w kolejnych cyklach rocznych.
